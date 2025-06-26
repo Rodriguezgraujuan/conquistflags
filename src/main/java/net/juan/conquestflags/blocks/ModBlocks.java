@@ -1,6 +1,6 @@
 package net.juan.conquestflags.blocks;
 
-import net.juan.conquestflags.Conquistflags;
+import net.juan.conquestflags.Conquestflags;
 import net.juan.conquestflags.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -18,11 +18,15 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, Conquistflags.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, Conquestflags.MOD_ID);
 
 
-    public static final RegistryObject<Block> FLAG_BLOCK = registerBlock("flag_block",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
+    public static final RegistryObject<Block> FLAG_BLOCK = registerBlock("bloque_bandera",
+            () -> new FlagBlock(BlockBehaviour.Properties
+                    .copy(Blocks.OAK_PLANKS)
+                    .strength(26.0f, 1200)
+                    .requiresCorrectToolForDrops()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

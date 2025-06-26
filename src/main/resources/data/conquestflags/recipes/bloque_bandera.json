@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#W#",
+    "SSS"
+  ],
+  "key": {
+    "#": { "item": "minecraft:white_wool" },
+    "W": { "item": "minecraft:stick" },
+    "S": { "item": "minecraft:oak_slab"}
+  },
+  "result": {
+    "item": "conquestflags:bloque_bandera"
+  }
+}
